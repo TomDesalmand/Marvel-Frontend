@@ -1,0 +1,15 @@
+.parent {
+    position: relative;
+}
+
+.searchbar_pos {
+    position: absolute;
+    top: 45px;
+    left: 1100px;
+}
+
+.searchbar {
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 20px;
+}
