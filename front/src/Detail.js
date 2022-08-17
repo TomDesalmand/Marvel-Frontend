@@ -23,12 +23,19 @@ function Detail(props) {
                 }
             </div>
         </div>
-        <div className="comics_detail">
-            <h1>Latest Comics:</h1>
-            {props.comicsList.map((comic, i) => {
-              return <Comics key={i} title={comic.title} price={comic.prices[0].price} release={comic.dates[0].date.substring(0, 10)}/>
-            })}
-        </div>
+        {
+            props.comicsList[0] ?
+                <div className="comics_detail"> 
+                    <h1>Latest Comics:</h1> 
+                        {props.comicsList.map((comic, i) => {
+                        return <Comics key={i} title={comic.title} price={comic.prices[0].price} release={comic.dates[0].date.substring(0, 10)}/>
+                        })}
+                </div>
+                :
+                <div className="comics_detail">
+                    <p>No comics found for this hero...</p>
+                </div>
+        }
     </div>
   )
 }
